@@ -9,10 +9,13 @@ CSS_URL="https://www.w3schools.com/w3css/4/w3.css"
 touch pag1.html
 touch pag2.html
 touch pag3.html
-
+if test -f w3.css;then
+echo "w3.css descargado"
+else
 if ! curl -o w3.css "$CSS_URL"; then
 echo "ERROR en la descarga, no se ejecutará el comando"
 exit 1
+fi
 fi
 
 cat >index.html<<EOF
