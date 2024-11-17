@@ -2,7 +2,7 @@
 
 touch index.html
 
-cat > index html <<EOF
+cat >index.html<<EOF
 <!DOCTTPE html>
 <html>
 <head>
