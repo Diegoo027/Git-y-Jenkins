@@ -1,4 +1,4 @@
-#!/user/bin/bash
+#!/usr/bin/bash
 
 touch index.html
 
