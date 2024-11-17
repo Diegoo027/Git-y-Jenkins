@@ -1,14 +1,19 @@
 #!/usr/bin/bash
 
-rm index.html pag1.html pag2.html pag3.html w3.css
+rm index.html pag1.html pag2.html pag3.html
 
 touch index.html
+
+CSS_URL="https://www.w3schools.com/w3css/4/w3.css"
 
 touch pag1.html
 touch pag2.html
 touch pag3.html
 
-touch w3.css
+if ! curl -o w3.css "$CSS_URL"; then
+echo "ERROR en la descarga, no se ejecutará el comando"
+exit 1
+fi
 
 cat >index.html<<EOF
 <!DOCTTPE html>
